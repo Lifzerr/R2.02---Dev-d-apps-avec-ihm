@@ -1,0 +1,15 @@
+Etape 3 :
+
+a)  Fenetre non modale, qui existe seulement le temps du slot (soit pas très longtemps ici)
+
+b) Fenetre non modale, qui est totalement indépendante de la MainWindow
+ Prob : Si je ferme la mainwindow, l'espace mémoire de la Dialog n'est pas libéré
+
+bis ) Le fait d'associer la Dialog à this fait que quand this est fermé DIalog l'est avec
+La fenetre n'est toujours pas modale
+
+c) Fenetre modale dépendante de MainWindow
+
+d) Fenetre non modale dépendante de MainWindow
+
+e) ici, Dialog est dépendante de MainWIndow et est modale. MainWIndow disparait (hide()) puis apparait quand l'exec de Dialog est terminée.
