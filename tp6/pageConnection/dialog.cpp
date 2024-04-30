@@ -8,7 +8,7 @@ Dialog::Dialog(QWidget *parent)
     ui->setupUi(this);
 
     // Connexions
-    QObject::connect(ui->okBtn, SIGNAL(clicked), this, SLOT(close()));
+    QObject::connect(ui->okBtn, SIGNAL(clicked()), this->ui->Dialog, SLOT(quit()));
 }
 
 Dialog::~Dialog()
