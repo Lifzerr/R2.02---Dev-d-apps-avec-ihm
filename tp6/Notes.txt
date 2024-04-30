@@ -2,7 +2,7 @@ Etape 3 :
 
 a)  Fenetre non modale, qui existe seulement le temps du slot (soit pas très longtemps ici)
 
-b) Fenetre non modale, qui est totalement indépendante de la MainWindow
+b) Fenetre non modale, qui est totalement indépendante de la MainWindow mais qui reste ouverte après exécution du slot ( passage adresse )
  Prob : Si je ferme la mainwindow, l'espace mémoire de la Dialog n'est pas libéré
 
 bis ) Le fait d'associer la Dialog à this fait que quand this est fermé DIalog l'est avec
