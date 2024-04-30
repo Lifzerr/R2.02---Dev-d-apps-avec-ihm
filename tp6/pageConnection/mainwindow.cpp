@@ -26,13 +26,17 @@ bool MainWindow::demandeConnexion()
     // Vérification de l'égalité des champs
     if(user == password && user == "moi")
     {
-        _dialog = new Dialog(this);
-        _dialog->show();
-        QMessageBox::information(this, "Connexion", "Connexion réussie");
+        _dialog = new Dialog(nullptr);
+        _dialog->setLabel("Connexion réussie !");
+        _dialog->exec();
+        //QMessageBox::information(this, "Connexion", "Connexion réussie");
     }
     else
     {
-        QMessageBox::information(this, "Connexion", "Connexion échouée");
+        _dialog = new Dialog(nullptr);
+        _dialog->setLabel("Connexion échouée");
+        _dialog->exec();
+        //QMessageBox::information(this, "Connexion", "Connexion échouée");
     }
 
     // Nettoyer les zones de saisie
