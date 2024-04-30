@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "dialog.h"
+#include <QMessageBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -19,5 +21,12 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    Dialog* _dialog;
+
+public slots:
+    bool demandeConnexion();
+
+signals:
+    void demandeOuvertureDialog(bool);
 };
 #endif // MAINWINDOW_H
