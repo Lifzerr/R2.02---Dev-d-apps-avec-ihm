@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/ampoule">
+        <file>ampouleAllumee2.PNG</file>
+        <file>ampouleEteinte2.PNG</file>
+    </qresource>
+</RCC>
