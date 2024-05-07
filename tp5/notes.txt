@@ -1,0 +1,27 @@
+TD n°5 - Motif MVP
+
+Activité 1 : 
+
+
+Etape 2 :
+
+e) Le résultat n'est pas modifié puisque nous n'avons aucun lien entre le modele et la vue.
+
+Etape 3 :
+
+h) Les boutons sont actifs mais rien ne se passe puisque le lien avec l'état n'est toujours pas fait
+
+
+
+Activité 2 :
+
+a) Il faut modifier apouleVue.cpp (majInterface) et ampoulevue.ui (Mettre l'image à l'origine)
+   Il faut aussi les importer (images) en tant que resources
+
+
+Etape 5 : 
+
+b) Il faut modifier la presentation pour qu'elle compte les 5 secondes depuis le moment ou elle recoit l'ordre d'allumer l'ampoule.
+
+c) Il suffit de transformer presentation en QObkect et d'ajouter dans demanderAllumer():
+		QTimer::singleShot(5000, this, &presentation::demanderEteindre)
