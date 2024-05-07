@@ -7,6 +7,7 @@ Dialog::Dialog(QWidget *parent)
     , ui(new Ui::Dialog)
 {
     ui->setupUi(this);
+    _nombreEnfants = 0;
 
     // Connections
     QObject::connect(ui->btnOk, SIGNAL(clicked(bool)), this, SLOT(okTriggered()));
@@ -18,16 +19,24 @@ Dialog::~Dialog()
     delete ui;
 }
 
+int Dialog::getNbEnfants() const
+{
+    return _nombreEnfants;
+}
+
 void Dialog::okTriggered()
 {
-    QString nom = ui->label->text();
-    QString prenom = ui->label_2->text();
+    _nom = ui->label->text();
+    _prenom = ui->label_2->text();
     bool ok;
 
     // Vérification du résultat
     if(ui->radioButton->isChecked())
     {
-        int numberOfChildren = QInputDialog::getInt(nullptr, "Fenetre de dialogue",
+        _nombreEnfants = QInputDialog::getInt(nullptr, "Fenetre de dialogue",
                                                     "Nombre d'enfants", 0, 0, 100, 1, &ok);
+        accept();
     }
 }
+
+
