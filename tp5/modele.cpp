@@ -20,3 +20,8 @@ Modele::UnEtat Modele::getEtat()
     return _etat;
 }
 
+void Modele::setEtat(UnEtat e)
+{
+    _etat = e;
+}
+

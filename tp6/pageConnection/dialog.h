@@ -21,6 +21,9 @@ public:
 
 private:
     Ui::Dialog *ui;
+
+public slots:
+    void quitter();
 };
 
 #endif // DIALOG_H

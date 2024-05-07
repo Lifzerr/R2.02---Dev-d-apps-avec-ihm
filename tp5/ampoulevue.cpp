@@ -47,12 +47,12 @@ void ampouleVue::majInterface(Modele::UnEtat e)
     switch(e)
     {
     case Modele::allume:
-        ui->label->setPixmap(QPixmap::fromImage(QImage(":/new/prefix1/ampouleAllumee2.PNG")));;
+        ui->label->setPixmap(QPixmap::fromImage(QImage(":/new/prefix1/ampouleAllumee2.PNG")));
         ui->radioButton->setEnabled(false);
         ui->radioButton_2->setEnabled(true);
         break;
     case Modele::eteint:
-        ui->label->setPixmap(QPixmap::fromImage(QImage(":/new/prefix1/ampouleEteinte2.PNG")));;
+        ui->label->setPixmap(QPixmap::fromImage(QImage(":/new/prefix1/ampouleEteinte2.PNG")));
         ui->radioButton->setEnabled(true);
         ui->radioButton_2->setEnabled(false);
         break;

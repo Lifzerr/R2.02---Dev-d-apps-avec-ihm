@@ -8,7 +8,7 @@ Dialog::Dialog(QWidget *parent)
     ui->setupUi(this);
 
     // Connexions
-    QObject::connect(ui->okBtn, SIGNAL(clicked()), this->ui->Dialog, SLOT(quit()));
+    QObject::connect(ui->okBtn, SIGNAL(clicked()), this, SLOT(quitter()));
 }
 
 Dialog::~Dialog()
@@ -26,4 +26,9 @@ void Dialog::setLabel(string result)
 {
     QString qResult = QString::fromStdString(result);
     ui->ResultText->setText(qResult);
+}
+
+void Dialog::quitter()
+{
+    ~this;
 }

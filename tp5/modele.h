@@ -15,6 +15,7 @@ public:
 		// modifie etat à valeur :eteindre
     UnEtat getEtat();
 		// getter : retourne valeur de etat
+    void setEtat(UnEtat);
 private:
     UnEtat _etat; 
 };

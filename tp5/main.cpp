@@ -18,6 +18,9 @@ int main(int argc, char *argv[])
     pres->setVue(&w);
     w.setPres(pres);
 
+    // Etat du modele
+    mod->setEtat(Modele::allume);
+
     // Affichage fenetre
     w.show();
     return a.exec();
