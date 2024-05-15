@@ -15,6 +15,9 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void requete1();
+    void etape3();
+    void requete2();
 
 private:
     Ui::MainWindow *ui;

@@ -13,8 +13,9 @@ public:
     Database();
     bool openDataBase();
     void closeDataBase();
-    void createtable();
-    bool restoreDataBase();
+    bool createDatabase();
+    bool insertVilles();
+    bool insertIntoTableVilles(const QVariantList &data);
 
 private:
     QSqlDatabase mydb;
